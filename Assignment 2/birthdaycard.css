@@ -1,0 +1,76 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: hotpink;
+}
+
+.birthdayCard {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform: perspective(2500px);
+  transition: 0.5s;
+}
+
+.birthdayCard:hover {
+  transform: perspective(2500px) rotate(5deg);
+}
+
+.birthdayCard:hover .cardFront {
+  transform: rotateY(-160deg);
+}
+
+.birthdayCard:hover .happy {
+  transform: scale(-1, 1);
+}
+
+.cardFront {
+  position: relative;
+  background-color: #e6cdcd;
+  width: 250px;
+  height: 350px;
+  overflow: hidden;
+  transform-origin: left;
+  transition: 1s;
+}
+
+.happy {
+  font-family: 'Dancing Script';
+  font-size: xx-large;
+  text-align: center;
+  margin: 30px;
+  padding: 5px;
+  transition: 0.1s;
+  border: dotted 2px red;
+}
+
+.cake {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6%;
+}
+
+.cardInside {
+  position: absolute;
+  background-color:#e6cdcd;
+  width: 250px;
+  height: 350px;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+p {
+  font-family: "Schoolbell";
+  font-size: 15px;
+  margin-top: 15%;
+  margin-bottom: 15%;
+  margin-left: 10%;
+  margin-right: 10%;
+  color: #333;
+}
